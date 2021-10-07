@@ -1,0 +1,28 @@
+body {
+    font-size: 22px;
+}
+
+#origin,
+#target {
+    width: 50%;
+    height: 100px;
+    margin: 20px auto;
+    background-color: cornsilk;
+    text-align: center;
+    padding: 15px;
+}
+
+#target {
+    background-color: palegreen;
+}
+
+#originOptions,
+#targetOptions {
+    padding-left: 50px;
+}
+
+#button {
+    text-align: center;
+    width: 200px;
+    margin: 15px auto;
+}

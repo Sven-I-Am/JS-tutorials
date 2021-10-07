@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Interaction between JS and HTML</title>
+</head>
+<body>
+
+    <div id="origin" class="row">
+        <p>I am some <i>random</i> bit of text.</p>
+    </div>
+    <div id="options" class="row">
+        <div class="col float-start" id="originOptions">
+            <p>Please select how you want to read the origin:</p>
+            <input name="read" type="radio" id="readhtml" value="html" checked>
+            <label for="readhtml">read the innerHTML</label><br>
+            <input name="read" type="radio" id="readtext" value="text">
+            <label for="readtext">read the innerText</label><br>
+        </div>
+        <div class="col" id="targetOptions">
+            <p>Please select how you want to write to the target:</p>
+            <input type="radio" id="writehtml" name="write" value="html"checked>
+            <label for="writehtml">write the innerHTML</label><br>
+            <input type="radio" id="writetext" name="write" value="text">
+            <label for="writetext">write the innerText</label><br>
+        </div>
+    </div>
+    <div id="button" class="row">
+        <button type="button" id="run">Show result</button>
+    </div>
+
+
+    <div id="target" class="row">
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
