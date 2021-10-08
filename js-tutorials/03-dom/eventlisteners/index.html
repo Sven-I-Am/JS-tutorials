@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>eventListeners</title>
+</head>
+<body>
+
+    <div class="row" id="mouseEvents">
+
+        <label for="listenerSelect">Select what eventListener you want to take a closer look at from the dropdown menu in the html snippet down below:</label>
+        <p id="htmlSnippet">document.getElementById('test').addEventListener(
+        <select name="listenerSelect" id="listenerSelect">
+            <option class="select" value="">---mouse events---</option>
+            <option class="select" value="click">'click'</option>
+            <option class="select" value="dblclick">'dblclick'</option>
+            <option class="select" value="mousedown">'mousedown'</option>
+            <option class="select" value="mouseup">'mouseup'</option>
+            <option class="select" value="mouseover">'mouseover'</option>
+            <option class="select" value="mouseout">'mouseout'</option>
+            <option class="select" value="mousemove">'mousemove'</option>
+            <option class="select" value="wheel">'wheel'</option>
+            <option class="select" value="contextmenu">'contextmenu'</option>
+            <option class="select" value="">---keyboard events---</option>
+            <option class="select" value="keydown">'keydown'</option>
+            <option class="select" value="keyup">'keyup'</option>
+            <option class="select" value="keypress">'keypress'</option>
+            <option class="select" value="">---input events---</option>
+            <option class="select" value="input">'input'</option>
+        </select>
+        , function (){<br>
+            counter++;<br>
+            })
+    </div>
+    <div id="button" class="row">
+        <button type="button" id="apply">Apply</button>
+    </div>
+
+
+    <div id="output" class="row">
+        <div class="col" id="def">
+
+        </div>
+        <div class="col">
+            <div id="testMouse">"test"</div>
+            <input type="text" id="testKey">
+        </div>
+        <div class="col" id="eventOutput">
+            <p>Counter:</p>
+            <div id="target">
+            0
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

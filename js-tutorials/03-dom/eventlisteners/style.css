@@ -1,0 +1,74 @@
+body {
+    font-size: 22px;
+}
+
+#mouseEvents {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#htmlSnippet {
+    width: 60%;
+    margin: 5px auto;
+    padding: 5px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    background-color: #ddd;
+    text-align: left;
+}
+
+#button {
+    width: 200px;
+    margin: 10px auto;
+}
+
+#output {
+    margin: 20px 50px;
+}
+.col {
+    margin: 5px;
+    padding: 20px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    min-height: 500px;
+}
+
+#testMouse {
+    width: 200px;
+    height: 100px;
+    padding: 35px;
+    margin: 40px auto 0 auto;
+    background-color: red;
+    box-shadow: 3px 3px 2px #555555;
+    text-align: center;
+    visibility: visible;
+}
+
+#testMouse:hover {
+    box-shadow: 2px 2px 2px #666;
+}
+
+#testMouse:active {
+    box-shadow: 1px 1px 2px #aaa;
+}
+
+#testKey {
+    width: 80%;
+    height: 200px;
+    margin: 30px 10%;
+    visibility:visible;
+}
+
+#eventOutput {
+    text-align: center;
+}
+
+#target {
+    width: 100px;
+    height: 100px;
+    border: 2px dotted red;
+    font-size: 30px;
+    padding: 30px;
+    margin: 20px auto;
+}
