@@ -29,9 +29,9 @@ NEW SYNTAX
 EXTRA
 ******************************************************************************************************************/
 let person = {
-    name: 'RajiniKanth', 
+    name: 'Mark', 
     age: 68, 
-    greeting: 'Thalaivaaaa!' 
+    greeting: 'Hi!' 
 };
 
 let oldSyntaxString = 
