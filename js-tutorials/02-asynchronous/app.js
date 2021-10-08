@@ -2,41 +2,41 @@
 
 //Display random joke using the Joke API
 ////////////////////////////////////////////////////ASYNC - AWAIT////////////////////////////////////////////////////////////////
-const getRandomJoke = async () => {
-  try {
-    const data = await fetch(`https://v2.jokeapi.dev/joke/Any?safe-mode`);
-    const parsedData = await data.json();
-    console.log(parsedData);
-    if (parsedData.joke) {
-      console.log(parsedData.joke);
-    } else {
-      console.log(parsedData.setup);
-      console.log(parsedData.delivery);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+// const getRandomJoke = async () => {
+//   try {
+//     const data = await fetch(`https://v2.jokeapi.dev/joke/Any?safe-mode`);
+//     const parsedData = await data.json();
+//     console.log(parsedData);
+//     if (parsedData.joke) {
+//       console.log(parsedData.joke);
+//     } else {
+//       console.log(parsedData.setup);
+//       console.log(parsedData.delivery);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////THEN - CATCH////////////////////////////////////////////////////////////////
-// const getRandomJoke = async () => {
-//   fetch(`https://v2.jokeapi.dev/joke/Any?safe-mode`)
-//     .then((data) => {
-//       data.json().then((parsedData) => {
-//         console.log(parsedData);
-//         if (parsedData.joke) {
-//           console.log(parsedData.joke);
-//         } else {
-//           console.log(parsedData.setup);
-//           console.log(parsedData.delivery);
-//         }
-//       });
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// };
+const getRandomJoke = () => {
+  fetch(`https://v2.jokeapi.dev/joke/Any?safe-mode`)
+    .then((data) => {
+      data.json().then((parsedData) => {
+        console.log(parsedData);
+        if (parsedData.joke) {
+          console.log(parsedData.joke);
+        } else {
+          console.log(parsedData.setup);
+          console.log(parsedData.delivery);
+        }
+      });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 document.getElementById("btn").addEventListener("click", getRandomJoke);
