@@ -6,18 +6,16 @@
 
 
 ## Arrow Functions
-[JavaScript ES6 - FreeCodeCamp][jes]
-[When should I use Arrow functions?][waf]
+- [JavaScript ES6 - FreeCodeCamp][jes]
+- [When should I use Arrow functions?][waf]
 
-## Operators
-[Operators][operator] & Expressions
-
+## [Operators][operator]
 - Assigment
 - Increment & Decrement
 
 ## Template Literals
-[MDN Web Docs][mtl]
-[Using the backtick as the delimiter][utl]
+- [MDN Web Docs][mtl]
+- [Using the backtick as the delimiter][utl]
 
 
 [jes]: https://www.freecodecamp.org/news/write-less-do-more-with-javascript-es6-5fd4a8e50ee2/
