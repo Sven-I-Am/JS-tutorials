@@ -1,0 +1,32 @@
+body {
+    font-size: 22px;
+    color: #072b46;
+}
+
+#menu {
+    width: 50%;
+    min-height: 50vh;
+    margin: 10% auto;
+    border: 2px solid mediumseagreen;
+    border-radius: 15px;
+    text-align: center;
+}
+
+H1 {
+    text-transform: uppercase;
+}
+
+H1:after {
+    display: block;
+    height: 2px;
+    background-color: #0a3d62;
+    content: " ";
+    width: 100px;
+    margin: 30px auto 0;
+}
+
+#toc {
+    width: 80%;
+    margin-left: auto;
+    text-align: left;
+}
