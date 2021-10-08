@@ -4,8 +4,8 @@
 ////////////////////////////////////////////////////ASYNC - AWAIT////////////////////////////////////////////////////////////////
 const getRandomJoke = async () => {
   try {
-    let data = await fetch(`https://v2.jokeapi.dev/joke/Any?safe-mode`);
-    let parsedData = await data.json();
+    const data = await fetch(`https://v2.jokeapi.dev/joke/Any?safe-mode`);
+    const parsedData = await data.json();
     console.log(parsedData);
     if (parsedData.joke) {
       console.log(parsedData.joke);
@@ -20,23 +20,23 @@ const getRandomJoke = async () => {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////THEN - CATCH////////////////////////////////////////////////////////////////
-/*const getRandomJoke = async () => {
-  fetch(`https://v2.jokeapi.dev/joke/Any?safe-mode`)
-    .then((data) => {
-      data.json().then((parsedData) => {
-        console.log(parsedData);
-        if (parsedData.joke) {
-          console.log(parsedData.joke);
-        } else {
-          console.log(parsedData.setup);
-          console.log(parsedData.delivery);
-        }
-      });
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-};*/
+// const getRandomJoke = async () => {
+//   fetch(`https://v2.jokeapi.dev/joke/Any?safe-mode`)
+//     .then((data) => {
+//       data.json().then((parsedData) => {
+//         console.log(parsedData);
+//         if (parsedData.joke) {
+//           console.log(parsedData.joke);
+//         } else {
+//           console.log(parsedData.setup);
+//           console.log(parsedData.delivery);
+//         }
+//       });
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// };
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 document.getElementById("btn").addEventListener("click", getRandomJoke);
@@ -63,6 +63,10 @@ const getCategories = async () => {
 
 (async () => {
   ///Approach 1
+  getRandomJoke()
+  console.log("hello")
+
+
   const categoriesArr = ["Any", "Misc", "Programming", "Dark", "Pun", "Spooky", "Christmas"];
   let select = document.getElementById("categories");
 
@@ -87,8 +91,6 @@ const getCategories = async () => {
   }
 })();
 
-
-
 document.getElementById("category-joke").addEventListener("click", async () => {
   let selectedCategory = document.getElementById("categories").value;
   const data = await fetch(`https://v2.jokeapi.dev/joke/${selectedCategory}?safe-mode`);
@@ -103,11 +105,36 @@ document.getElementById("category-joke").addEventListener("click", async () => {
   }
 });
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// POST request to the Joke API
+document.getElementById("btn-post").addEventListener("click", async () => {
+  let joke = document.getElementById("joke").value;
 
+  let data = {
+    formatVersion: 3,
+    category: "Misc",
+    type: "single",
+    joke: joke,
+    flags: {
+        nsfw: false,
+        religious: false,
+        political: false,
+        racist: false,
+        sexist: false,
+        explicit: false
+    },
+    lang: "en"
+}
 
-
-
-
-
-
+  try {
+    const res = await fetch("https://v2.jokeapi.dev/submit", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+    const parsedData = await res.json();
+    console.log(parsedData);
+  } catch (error) {
+    console.log(error);
+  }
+});
