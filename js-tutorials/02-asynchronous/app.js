@@ -63,9 +63,6 @@ const getCategories = async () => {
 
 (async () => {
   ///Approach 1
-  getRandomJoke()
-  console.log("hello")
-
 
   const categoriesArr = ["Any", "Misc", "Programming", "Dark", "Pun", "Spooky", "Christmas"];
   let select = document.getElementById("categories");
